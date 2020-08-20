@@ -1,0 +1,5 @@
+baseURL = "/"
+title = "Documentation"
+
+[Permalinks]
+   page = "/:filename/"

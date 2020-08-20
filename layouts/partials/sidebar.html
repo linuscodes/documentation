@@ -1,0 +1,17 @@
+<aside class="sidebar">
+   <h2>
+      {{ .Site.Title }}
+   </h2>
+
+   <ul>
+      {{ $current := . }}
+      {{ range .Site.Menus.main }}
+      {{ $active := eq .Name $current.Title }}
+         <li class="sidebar-link {{ if $active }}active{{ end }}">
+            <a title="{{ .Name }}" href="{{ .URL }}">
+               {{ .Name }}
+            </a>
+         </li>
+      {{ end }}
+   </ul>
+</aside>

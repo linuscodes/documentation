@@ -1,0 +1,55 @@
+.sidebar {
+   width: 350px;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: $black;
+   padding: 50px 40px;
+
+   h2 {
+      color: $white;
+   }
+
+   ul {
+      list-style: none;
+      margin-top: 40px;
+
+      .sidebar-link {
+         margin-bottom: 10px;
+         display: block;
+         width: 100%;
+      
+         a {
+            color: $white;
+      
+            &::before {
+               content: "";
+               width: 5px;
+               height: 5px;
+               border-radius: 50%;
+               position: relative;
+               display: inline-block;
+               margin-right: 5px;
+               transform: translateY(-2px);
+               transition: .3s $cubic;
+               background: darken($white, 70%);
+            }
+      
+            &:hover {
+               &::before {
+                  background: darken($white, 20%);
+               }
+            }
+         }
+
+         &.active {
+            a {
+               &::before {
+                  background: $highlight;
+               }
+            }
+         }
+      } 
+   }
+}
