@@ -57,6 +57,7 @@
    @media screen and (max-width: 850px) {
       transform: translateX(-100%);
       top: 60px;
+padding: 30px 25px;
 
       &.is-toggled {
          transform: translateX(0);
