@@ -6,7 +6,8 @@
    left: 0;
    background: $black;
    padding: 50px 40px;
-   transition: transform .3s $cubic;
+   transition: transform .4s $cubic;
+   z-index: 3;
 
    h2 {
       color: $white;
@@ -57,7 +58,7 @@
    @media screen and (max-width: 850px) {
       transform: translateX(-100%);
       top: 60px;
-padding: 30px 25px;
+      padding: 30px 25px;
 
       &.is-toggled {
          transform: translateX(0);

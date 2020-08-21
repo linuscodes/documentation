@@ -1,15 +1,289 @@
 +++
-title = "Freundschaften"
+title = "Strukturierung mit HTML"
 menu = "main"
-url = "/friendships"
-name = "friendships"
+url = "/strukturierung-mit-html"
+name = "Strukturierung mit HTML"
 weight = 2
 +++
 
-<h1>
-   Freundschaften
-</h1>
+<section>
+   <h1>
+      Strukturierung mit HTML
+   </h1>
+   
+   <p>
+      Wenn man es mal ganz genau nimmt, ist HTML keine richtige Programmiersprache, sondern nur da, um Websites zu strukturieren. Aus diesem Grund ist sie auch nicht schwer zu lernen, da man sich ledeglich einige, wenige Begriffe merken muss.
+   </p>
+</section>
+
+<section id="basic-structure">
+   <h2>
+      Das Grundgerüst
+   </h2>
+   <p>
+      Jede HTML-Datei ist von Grund auf gleich aufgebaut. Wenn später im einzelnen die Elemente noch variieren, bleibt trotzdem das Grundgerüst erhalten. 
+   </p>
+
+   <pre><code><span class="tag">&lt;html></span>
+   <span class="tag">&lt;head></span>
+   <span class="tag">&lt;title></span><span class="text">Meine Website</span><span class="tag">&lt;/title></span>
+   <span class="tag">&lt;/head></span>
+   <span class="tag">&lt;body></span>
+      <span class="text">Hier steht der Inhalt.</span>
+   <span class="tag">&lt;/body></span>
+<span class="tag">&lt;/html></span></code></pre>
 
 <p>
-   Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aliquid nihil dignissimos porro repellendus sit optio iusto rerum ea, quia eos odio quidem a tempore ipsam saepe corporis dolores assumenda!
+   Das ist die ganz minimal gehaltene Grundstruktur eines jeden HTML-Dokuments. Wie man schon sehen kann, werden alle Tags also die Elemente in spitzen Klammern geschrieben. 
 </p>
+<p>
+   Sprich: <code class="inline"><span class="tag">&lt;Tag-Name></span><span class="tag">&lt;/Tag-Name></span></code>
+   Das „Tag-Name“ wird dabei durch das jeweilige Element ersetzt. Bei dem ersten Beispiel oben lernen wir schon mal die wichtigsten 4 kennen. 
+</p>
+<p>
+   <code class="inline"><span class="tag">&lt;html></span></code> ist ganz wichtig, damit der Browser erkennt, dass dies eine HTML-Datei ist. Alles, was außerhalb dieses Elements steht, wird ignoriert. 
+</p>
+<p>
+   Der <code class="inline"><span class="tag">&lt;head></span></code>  ist der Kopfbereich einer Internetseite. Während der ganze, sichtbare Inhalt im <code class="inline"><span class="tag">&lt;body></span></code> zu finden ist, sucht man im <code class="inline"><span class="tag">&lt;head></span></code> eher nach zusätzlichen Angaben zur Verarbeitung und für die Darstellung, die nicht im Hauptfenster des Browsers zu sehen sind. Dazu gehört zum Beispiel der Titel der Website, also <code class="inline"><span class="tag">&lt;title></span></code>, oder Meta-Angaben, die Auskunft über das Erstellungsdatum oder den Urheber geben. Außerdem wird im <code class="inline"><span class="tag">&lt;head></span></code> das CSS eingebunden. Dazu kommen wir aber später noch.
+</p>
+<p>
+   Der besagte Titel der Website ist unter <code class="inline"><span class="tag">&lt;title></span></code> im Kopfbereich der Seite zu finden. Das ist quasi der Tag um euere Seite mit einem Namen zu taufen. Er wird später oben im Tab stehen.
+</p>
+<p>
+   Zu guter letzt kommen wir noch zum <code class="inline"><span class="tag">&lt;body></span></code> Element. Alles, was sich in diesem Element befindet, wird später auf der Seite zu sehen sein. Das kann ein Text sein, aber auch ein Bild, ein Button ein Textfeld oder ein Menü. 
+</p>
+</section>
+
+<section>
+   <h2>
+      Weitere Tags
+   </h2>
+   <h3 class="indent">
+      Struktur
+   </h3>
+
+   <table>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;header>&lt;/header></span></code>
+         </td>
+         <td>
+            <p>
+               Meistens der erste Abschnitt einer Website, also die "Hero-Section". Nicht zu verwechseln mit <code class="inline"><span class="tag">&lt;head></span></code>!
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;nav>&lt;/nav></span></code>
+         </td>
+         <td>
+            <p>
+               Navigation
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;section>&lt;/section></span></code>
+         </td>
+         <td>
+            <p>
+               Gruppierung von Elementen / Abschnitt einer Website
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;footer>&lt;/footer></span></code>
+         </td>
+         <td>
+            <p>
+               Footer der Seite
+            </p>
+         </td>
+      </tr>
+   </table>
+</section>
+
+<section>
+   <h3 class="indent">
+      Text
+   </h3>
+   <table>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;h1>&lt;/h1></span></code><br>
+            <code class="inline"><span class="tag">&lt;h2>&lt;/h2></span></code><br>
+            <code class="inline"><span class="tag">&lt;h3>&lt;/h3></span></code><br>
+            <code class="inline"><span class="tag">&lt;h4>&lt;/h4></span></code><br>
+            <code class="inline"><span class="tag">&lt;h5>&lt;/h5></span></code><br>
+            <code class="inline"><span class="tag">&lt;h6>&lt;/h6></span></code>
+         </td>
+         <td>
+            <p>
+               Überschriften. <code class="inline"><span class="tag">&lt;h1></span></code> ist hierbei die größte, <code class="inline"><span class="tag">&lt;h6></span></code> die kleinste.
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;p>&lt;/p></span></code>
+         </td>
+         <td>
+            <p>
+               Textabsatz (engl. <i>paragraph</i>)
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;br></span></code>
+         </td>
+         <td>
+            <p>
+               Erzwungener Zeilenumbruch (muss nicht geschlossen werden)
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;hr></span></code>
+         </td>
+         <td>
+            <p>
+               Trennlinie (muss nicht geschlossen werden)
+            </p>
+         </td>
+      </tr>
+   </table>
+</section>
+
+<section>
+   <h3 class="indent">
+      Hervorhebungen
+   </h3>
+
+   <table>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;b>&lt;/b></span></code>
+         </td>
+         <td>
+            <p>
+               Fetter Text (<b>blabla</b>)
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;i>&lt;/i></span></code>
+         </td>
+         <td>
+            <p>
+               Kursiver Text (<i>blabla</i>)
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;sup>&lt;/sup></span></code>
+         </td>
+         <td>
+            <p>
+               Hochgestellter Text (m<sup>2</sup>)
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;sub>&lt;/sub></span></code>
+         </td>
+         <td>
+            <p>
+               Tiefgestellter Text (H<sub>2</sub>O)
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;small>&lt;/small></span></code>
+         </td>
+         <td>
+            <p>
+               Für das "Kleingedruckte" (<small>blabla</small>)
+            </p>
+         </td>
+      </tr>
+   </table>
+</section>
+
+<section>
+   <h3 class="indent">
+      Listen
+   </h3>
+
+   <table>
+      <tr>
+         <td>
+            <pre><code><span class="tag">&lt;ul></span>
+   <span class="tag">&lt;li></span><span class="text">Beispiel</span><span class="tag">&lt;/li></span>
+   <span class="tag">&lt;li></span><span class="text">Beispiel</span><span class="tag">&lt;/li></span>
+<span class="tag">&lt;/ul></span></code></pre>
+         </td>
+         <td>
+            <p>
+               Ungeordnete Liste
+            </p>
+            <p>
+               <ul>
+                  <li>Beispiel</li>
+                  <li>Beispiel</li>
+               </ul>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <pre><code><span class="tag">&lt;ol></span>
+   <span class="tag">&lt;li></span><span class="text">Beispiel</span><span class="tag">&lt;/li></span>
+   <span class="tag">&lt;li></span><span class="text">Beispiel</span><span class="tag">&lt;/li></span>
+<span class="tag">&lt;/ol></span></code></pre>
+         </td>
+         <td>
+            <p>
+               Geordnete Liste
+            </p>
+            <p>
+               <ol>
+                  <li>Beispiel</li>
+                  <li>Beispiel</li>
+               </ol>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <code class="inline"><span class="tag">&lt;li>&lt;/li></span></code>
+         </td>
+         <td>
+            <p>
+               Listen Element (Siehe Beispiele oben)
+            </p>
+         </td>
+      </tr>
+   </table>
+</section>
+
+<section>
+   <h3 class="indent">
+      Link
+   </h3>
+
+   <p>
+      <code class="inline"><span class="tag">&lt;a</span> <span class="attribute">href</span><span class="punctuation">=</span><span class="string">"https://example.com/"</span><span class="tag">></span><span class="text">Link Text</span><span class="tag">&lt;/a></span></code>
+   </p>
+   <p>
+      Mit einem Hyperlink kann man auf andere Seiten verweisen und weiterleiten.
+   </p>
+</section>

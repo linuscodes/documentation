@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Documentation"
+title = "HTML und CSS Basics"
 
 [Permalinks]
    page = "/:filename/"

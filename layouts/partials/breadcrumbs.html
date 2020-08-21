@@ -1,0 +1,17 @@
+<!-- {{ range where .Site.Pages "RelPermalink" .Params.parent }}
+<a href="{{ .Permalink }}">⇡ {{ .Title }}</a>
+{{ end }} -->
+
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "/" }}
+<ol class="breadcrumbs">
+   <li>
+      <a href="/">Home</a>
+   </li>
+
+   {{ range split $url "/" }}
+     <li>
+        <a href="{{ . | absURL }}">{{ . }}</a>
+      </li>
+   {{ end }}
+ </ol>
+ 

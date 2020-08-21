@@ -4,6 +4,13 @@
 
 <div class="page-content">
    {{ .Content }}
+
+   {{ partial "pagination-footer.html" . }}
 </div>
+
+<div class="breadcrumbs">
+   {{ partial "breadcrumbs.html" . }}
+</div>
+
 
 {{ partial "footer.html" . }}
