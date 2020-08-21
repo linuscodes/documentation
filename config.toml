@@ -3,3 +3,8 @@ title = "Documentation"
 
 [Permalinks]
    page = "/:filename/"
+
+[[ menu.main ]]
+   url = "/"
+   name = "Home"
+   weight = 1
