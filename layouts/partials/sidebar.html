@@ -6,8 +6,8 @@
    <ul>
       {{ $current := . }}
       {{ range .Site.Menus.main }}
-      {{ $active := eq .Name $current.Title }}
-         <li class="sidebar-link {{ if $active }}active{{ end }}">
+      {{ $active := (eq $current.RelPermalink .URL) | or (eq .Name $current.Title) }}
+         <li class="sidebar-link{{ if $active }} active{{ end }}">
             <a title="{{ .Name }}" href="{{ .URL }}">
                {{ .Name }}
             </a>
